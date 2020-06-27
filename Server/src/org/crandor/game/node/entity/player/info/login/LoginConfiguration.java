@@ -28,7 +28,7 @@ import org.crandor.net.packet.context.InterfaceContext;
 import org.crandor.net.packet.out.Interface;
 import org.crandor.plugin.Plugin;
 
-import com.sun.xml.internal.ws.util.StringUtils;
+//import com.sun.xml.internal.ws.util.StringUtils;
 
 /**
  * Sends the login configuration packets.
@@ -215,8 +215,8 @@ public final class LoginConfiguration {
 	                if (!node.asPlayer().getAnimator().isAnimating() && node.asPlayer().getStatisticsManager().getPATS().getStatisticalAmount()<10) {
 	                	node.asPlayer().animate(Animation.create(2105));
 	                }
-	                player.getDialogueInterpreter().sendPlainMessage(false,"You pat " + StringUtils.capitalize(node.asPlayer().getName()) + " on the head. " + (node.asPlayer().getAppearance().getGender() == Gender.MALE ? "He" : "She") + " " + (node.asPlayer().getStatisticsManager().getPATS().getStatisticalAmount() < 10 ? "confusingly" : "")+ " enjoys it.");
-	                node.asPlayer().sendMessage(StringUtils.capitalize(player.getName()) + " pats you, you feel good" + (node.asPlayer().getStatisticsManager().getPATS().getStatisticalAmount() < 10 ? ", yet confused." : "."));
+	                player.getDialogueInterpreter().sendPlainMessage(false,"You pat " + node.asPlayer().getName() + " on the head. " + (node.asPlayer().getAppearance().getGender() == Gender.MALE ? "He" : "She") + " " + (node.asPlayer().getStatisticsManager().getPATS().getStatisticalAmount() < 10 ? "confusingly" : "")+ " enjoys it.");
+	                node.asPlayer().sendMessage(player.getName() + " pats you, you feel good" + (node.asPlayer().getStatisticsManager().getPATS().getStatisticalAmount() < 10 ? ", yet confused." : "."));
 	                node.asPlayer().getStatisticsManager().getPATS().incrementAmount();
 	                return true;
 	            }

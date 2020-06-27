@@ -13,8 +13,8 @@ import org.crandor.net.amsc.WorldCommunicator;
 import org.crandor.tools.TimeStamp;
 import org.crandor.tools.backup.AutoBackup;
 
-import javax.annotation.Resource;
-import java.awt.*;
+//import javax.annotation.Resource;
+//import java.awt.*;
 import java.net.BindException;
 
 /**
